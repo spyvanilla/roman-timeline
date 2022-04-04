@@ -1,1 +1,1 @@
-# Linha do tempo dos impérios romanos feito em pygame
+# Linha do tempo dos império romano feito em pygame

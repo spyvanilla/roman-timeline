@@ -35,28 +35,32 @@ square_height = 0
 
 high_empire_arrows = [
     (300,300),
-    (450,300)
+    (479,300),
+    (658,300)
 ]
 high_empire_square_positions = [
     [(250,360),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(260,321)],
-    [(400,490),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(410,321)]
+    [(429,539),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(439,321)],
+    [(608,718),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(618,321)]
 ]
 high_empire_periods = [
     [game_font.render('7600 A.C',1,white),(200,270)],
-    [game_font.render('7500 A.C',1,white),(600,270)]
+    [game_font.render('7500 A.C',1,white),(800,270)]
 ]
 
 low_empire_arrows = [
     (300,300),
-    (450,300)
+    (479,300),
+    (658,300)
 ]
 low_empire_square_positions = [
     [(250,360),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(260,321)],
-    [(400,490),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(410,321)]
+    [(429,539),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(439,321)],
+    [(608,718),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(618,321)]
 ]
 low_empire_periods = [
-    [game_font.render('5600 A.C',1,white),(200,270)],
-    [game_font.render('5500 A.C',1,white),(600,270)]
+    [game_font.render('7600 A.C',1,white),(200,270)],
+    [game_font.render('7500 A.C',1,white),(800,270)]
 ]
 
 line_position = 10
@@ -177,7 +181,7 @@ def draw(empire,display_square=None):
     end_pos = (8000-map_limit,290)
 
     window.fill(black)
-    window.blit(title,(25-obstacle_view,15))
+    window.blit(title,(25-obstacle_view,5))
     
     for arr in arrows:
         window.blit(arrow,(arr[0]-obstacle_view,arr[1]))

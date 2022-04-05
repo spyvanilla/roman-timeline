@@ -9,7 +9,7 @@ game_font = pygame.font.Font('Cloude_Regular_1.02.ttf',30)
 width,height = 800,600
 
 window = pygame.display.set_mode((width, height))
-name = pygame.display.set_caption('Roman timeline')
+name = pygame.display.set_caption('Roman Empire Timeline')
 
 map_limit = 0
 obstacle_view = 0
@@ -25,6 +25,7 @@ player_velocity = 5
 
 square_width = 0
 square_height = 0
+
 square_positions = [
     [(250,360),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(260,321)],
     [(850,960),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(860,321)]

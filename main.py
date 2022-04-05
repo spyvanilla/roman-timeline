@@ -36,16 +36,23 @@ square_height = 0
 high_empire_arrows = [
     (300,300),
     (479,300),
-    (658,300)
+    (658,300),
+    (900,300),
+    (1079,300),
+    (1258,300)
 ]
 high_empire_square_positions = [
     [(250,360),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(260,321)],
     [(429,539),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(439,321)],
-    [(608,718),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(618,321)]
+    [(608,718),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(618,321)],
+    [(850,960),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(860,321)],
+    [(1029,1139),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(1039,321)],
+    [(1208,1318),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(1218,321)]
 ]
 high_empire_periods = [
     [game_font.render('7600 A.C',1,white),(200,270)],
-    [game_font.render('7500 A.C',1,white),(800,270)]
+    [game_font.render('7500 A.C',1,white),(800,270)],
+    [game_font.render('7400 A.C',1,white),(1400,270)]
 ]
 
 low_empire_arrows = [

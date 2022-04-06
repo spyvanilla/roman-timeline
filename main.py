@@ -42,12 +42,12 @@ high_empire_arrows = [
     (1258,300)
 ]
 high_empire_square_positions = [
-    [(250,360),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(260,321)],
-    [(429,539),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(439,321)],
-    [(608,718),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(618,321)],
-    [(850,960),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(860,321)],
-    [(1029,1139),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(1039,321)],
-    [(1208,1318),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(1218,321)]
+    [(250,360),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5','Decoy text 6','Decoy text 7','Decoy text 8','Decoy text 9','Decoy text 10','Decoy text 11','Decoy text 12','Decoy text 13','Decoy text 14','Decoy text 15'],(220,321)],
+    [(429,539),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5','Decoy text 6','Decoy text 7','Decoy text 8','Decoy text 9','Decoy text 10','Decoy text 11','Decoy text 12','Decoy text 13','Decoy text 14','Decoy text 15'],(399,321)],
+    [(608,718),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5','Decoy text 6','Decoy text 7','Decoy text 8','Decoy text 9','Decoy text 10','Decoy text 11','Decoy text 12','Decoy text 13','Decoy text 14','Decoy text 15'],(538,321)],
+    [(850,960),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5','Decoy text 6','Decoy text 7','Decoy text 8','Decoy text 9','Decoy text 10','Decoy text 11','Decoy text 12','Decoy text 13','Decoy text 14','Decoy text 15'],(820,321)],
+    [(1029,1139),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5','Decoy text 6','Decoy text 7','Decoy text 8','Decoy text 9','Decoy text 10','Decoy text 11','Decoy text 12','Decoy text 13','Decoy text 14','Decoy text 15'],(999,321)],
+    [(1208,1318),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5','Decoy text 6','Decoy text 7','Decoy text 8','Decoy text 9','Decoy text 10','Decoy text 11','Decoy text 12','Decoy text 13','Decoy text 14','Decoy text 15'],(1138,321)]
 ]
 high_empire_periods = [
     [game_font.render('7600 A.C',1,white),(200,270)],
@@ -61,13 +61,17 @@ low_empire_arrows = [
     (658,300)
 ]
 low_empire_square_positions = [
-    [(250,360),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(260,321)],
-    [(429,539),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(439,321)],
-    [(608,718),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5'],(618,321)]
+    [(250,360),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5','Decoy text 6','Decoy text 7','Decoy text 8','Decoy text 9','Decoy text 10','Decoy text 11','Decoy text 12','Decoy text 13','Decoy text 14','Decoy text 15'],(220,321)],
+    [(429,539),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5','Decoy text 6','Decoy text 7','Decoy text 8','Decoy text 9','Decoy text 10','Decoy text 11','Decoy text 12','Decoy text 13','Decoy text 14','Decoy text 15'],(399,321)],
+    [(608,718),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5','Decoy text 6','Decoy text 7','Decoy text 8','Decoy text 9','Decoy text 10','Decoy text 11','Decoy text 12','Decoy text 13','Decoy text 14','Decoy text 15'],(538,321)],
+    [(850,960),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5','Decoy text 6','Decoy text 7','Decoy text 8','Decoy text 9','Decoy text 10','Decoy text 11','Decoy text 12','Decoy text 13','Decoy text 14','Decoy text 15'],(820,321)],
+    [(1029,1139),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5','Decoy text 6','Decoy text 7','Decoy text 8','Decoy text 9','Decoy text 10','Decoy text 11','Decoy text 12','Decoy text 13','Decoy text 14','Decoy text 15'],(999,321)],
+    [(1208,1318),['Decoy title','Decoy text 1','Decoy text 2','Decoy text 3','Decoy text 4','Decoy text 5','Decoy text 6','Decoy text 7','Decoy text 8','Decoy text 9','Decoy text 10','Decoy text 11','Decoy text 12','Decoy text 13','Decoy text 14','Decoy text 15'],(1138,321)]
 ]
 low_empire_periods = [
     [game_font.render('7600 A.C',1,white),(200,270)],
-    [game_font.render('7500 A.C',1,white),(800,270)]
+    [game_font.render('7500 A.C',1,white),(800,270)],
+    [game_font.render('7400 A.C',1,white),(1400,270)]
 ]
 
 line_position = 10
@@ -75,7 +79,7 @@ line_position = 10
 def open_animation():
     global square_width,square_height
 
-    if square_width == 100 and square_height == 100:
+    if square_width == 200 and square_height == 200:
         return True
 
     square_width += 10

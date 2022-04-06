@@ -149,10 +149,10 @@ class Draw:
             if len(display_square) > 1:
                 title = game_font.render(display_square[1][0],1,black)
 
-                self.window.blit(title,(square.x+50-title.get_width()//2,square.y+20-title.get_height()//2))
+                self.window.blit(title,(square.x+100-title.get_width()//2,square.y+20-title.get_height()//2))
 
                 for position,text in enumerate(display_square[1][1:]):
                     text = game_font.render(text,1,black)
-                    self.window.blit(text,(square.x+100-text.get_width()//2,square.y+40+position*10-text.get_height()//2))
+                    self.window.blit(text,(square.x+5,square.y+40+position*10-text.get_height()//2))
 
         pygame.display.update()

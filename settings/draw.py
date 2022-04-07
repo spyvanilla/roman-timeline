@@ -29,14 +29,12 @@ low_empire_arrows = [
     (300,300),
     (479,300),
     (658,300),
-    (900,300),
-    (1079,300),
-    (1258,300)
+    (837,300),
+    (1016,300)
 ]
 low_empire_periods = [
-    [game_font.render('7600 A.C',1,white),(200,270)],
-    [game_font.render('7500 A.C',1,white),(800,270)],
-    [game_font.render('7400 A.C',1,white),(1400,270)]
+    [game_font.render('453 A.C',1,white),(200,270)],
+    [game_font.render('395 A.C',1,white),(1116,270)]
 ]
 
 with open('square_positions.json','r',encoding='utf-8') as file:
@@ -153,6 +151,6 @@ class Draw:
 
                 for position,text in enumerate(display_square[1][1:]):
                     text = game_font.render(text,1,black)
-                    self.window.blit(text,(square.x+5,square.y+40+position*10-text.get_height()//2))
+                    self.window.blit(text,(square.x+2,square.y+40+position*10-text.get_height()//2))
 
         pygame.display.update()

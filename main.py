@@ -8,7 +8,7 @@ from settings.movement import Movement
 width,height = 800,600
 
 window = pygame.display.set_mode((width, height))
-name = pygame.display.set_caption('Roman Empire Timeline')
+name = pygame.display.set_caption('Paulão Pintão')
 
 black = (0,0,0)
 white = (255,255,255)
@@ -75,4 +75,4 @@ def main():
                 movement.reset()
 
 if __name__ == '__main__':
-    main()
+    main() #AI RÉGUA MESSI MÍDIA

@@ -58,8 +58,11 @@ class Draw:
 
         self.arrow = pygame.image.load(os.path.join('Images/arrow.png')).convert_alpha()
         self.colosseum = pygame.transform.scale(pygame.image.load(os.path.join('Images/colosseum.png')),(800,600)).convert()
+        self.background = pygame.transform.scale(pygame.image.load(os.path.join('Images/background.png')),(800,600)).convert()
 
         self.button = pygame.image.load(os.path.join('Images/button.png')).convert_alpha()
+
+        self.warrior = pygame.image.load(os.path.join('sprites/roman_warrior.png')).convert_alpha()
 
     def fade(self):
         fade = pygame.Surface((self.width,self.height))
@@ -125,7 +128,7 @@ class Draw:
         start_pos = (0,290)
         end_pos = (8000-map_limit,290)
 
-        self.window.fill(black)
+        self.window.blit(self.background,(0,0))
         self.window.blit(title,(25-obstacle_view,5))
         self.window.blit(end,(1200-obstacle_view,5))
 
@@ -138,7 +141,7 @@ class Draw:
             self.window.blit(period[0],(period_rect.x-period[0].get_width()//2,240))
 
         pygame.draw.line(self.window,white,start_pos,end_pos,width=10)
-        pygame.draw.rect(self.window,white,player)
+        self.window.blit(self.warrior,(player.x,235))
 
         if display_square is not None:
             square = pygame.Rect(display_square[0][0]-obstacle_view,display_square[0][1],square_width,square_height)

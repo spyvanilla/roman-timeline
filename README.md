@@ -19,7 +19,7 @@ git clone https://github.com/spyvanilla/sorting-algorithm-visualizer.git
 ```
 Encontre o diretório, copie o caminho e use:
 ```
-cd ~/.sorting-algorithm-visualizer
+cd ~/.roman-timeline
 ```
 Então execute o arquivo main utilizando:
 ```

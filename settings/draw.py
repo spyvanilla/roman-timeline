@@ -15,14 +15,12 @@ high_empire_arrows = [
     (300,300),
     (479,300),
     (658,300),
-    (900,300),
-    (1079,300),
-    (1258,300)
+    (837,300),
+    (1016,300)
 ]
 high_empire_periods = [
-    [game_font.render('7600 A.C',1,white),(200,270)],
-    [game_font.render('7500 A.C',1,white),(800,270)],
-    [game_font.render('7400 A.C',1,white),(1400,270)]
+    [game_font.render('27 A.C',1,white),(200,270)],
+    [game_font.render('3 D.C',1,white),(1116,270)]
 ]
 
 low_empire_arrows = [

@@ -31,8 +31,8 @@ low_empire_arrows = [
     (1016,300)
 ]
 low_empire_periods = [
-    [game_font.render('453 A.C',1,white),(200,270)],
-    [game_font.render('395 A.C',1,white),(1116,270)]
+    [game_font.render('453 D.C',1,white),(200,270)],
+    [game_font.render('395 D.C',1,white),(1116,270)]
 ]
 
 with open('square_positions.json','r',encoding='utf-8') as file:
@@ -120,13 +120,15 @@ class Draw:
             title = title_font.render('Baixo Império',1,white)
             arrows = low_empire_arrows
             periods = low_empire_periods
+        end = title_font.render('Fim',1,white)
 
         start_pos = (0,290)
         end_pos = (8000-map_limit,290)
 
         self.window.fill(black)
         self.window.blit(title,(25-obstacle_view,5))
-        
+        self.window.blit(end,(1200-obstacle_view,5))
+
         for arr in arrows:
             self.window.blit(self.arrow,(arr[0]-obstacle_view,arr[1]))
 

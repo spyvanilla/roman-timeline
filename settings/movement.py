@@ -2,6 +2,9 @@ import json
 
 import pygame
 
+high_empire_limit = 500
+low_empire_limit = 500
+
 with open('square_positions.json','r',encoding='utf-8') as file:
     data = json.load(file)
     high_empire_square_positions = data['high_empire_square_positions']
@@ -28,6 +31,17 @@ class Movement:
 
         self.line_position = 10
 
+    def reset(self):
+        self.player.x = 10
+
+        self.square_width = 0
+        self.square_height = 0
+
+        self.map_limit = 0
+        self.obstacle_view = 0
+
+        self.line_position = 10
+
     def open_animation(self):
         if self.square_width == 200 and self.square_height == 200:
             return True
@@ -38,8 +52,10 @@ class Movement:
     def movement(self,keys_pressed,empire):
         if empire == 1:
             square_positions = high_empire_square_positions
+            empire_limit = high_empire_limit
         else:
             square_positions = low_empire_square_positions
+            empire_limit = low_empire_limit
 
         if keys_pressed[pygame.K_a]:
             if self.player.x == 390:
@@ -61,9 +77,14 @@ class Movement:
                 self.map_limit += self.player_velocity
                 self.obstacle_view += self.player_velocity
                 self.line_position += self.player_velocity
+
+                if self.map_limit >= empire_limit:
+                    self.player.x = 395
+                    self.map_limit = 500
             else:
-                self.player.x += self.player_velocity
-                self.line_position += self.player_velocity
+                if self.player.x <= 785:
+                    self.player.x += self.player_velocity
+                    self.line_position += self.player_velocity
 
         for square_position in square_positions:
             if self.line_position >= square_position[0][0] and self.line_position <= square_position[0][1]:

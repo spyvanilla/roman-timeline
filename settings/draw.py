@@ -15,14 +15,12 @@ high_empire_arrows = [
     (300,300),
     (479,300),
     (658,300),
-    (900,300),
-    (1079,300),
-    (1258,300)
+    (837,300),
+    (1016,300)
 ]
 high_empire_periods = [
-    [game_font.render('7600 A.C',1,white),(200,270)],
-    [game_font.render('7500 A.C',1,white),(800,270)],
-    [game_font.render('7400 A.C',1,white),(1400,270)]
+    [game_font.render('27 A.C',1,white),(200,270)],
+    [game_font.render('3 D.C',1,white),(1116,270)]
 ]
 
 low_empire_arrows = [
@@ -60,8 +58,11 @@ class Draw:
 
         self.arrow = pygame.image.load(os.path.join('Images/arrow.png')).convert_alpha()
         self.colosseum = pygame.transform.scale(pygame.image.load(os.path.join('Images/colosseum.png')),(800,600)).convert()
+        self.background = pygame.transform.scale(pygame.image.load(os.path.join('Images/background.png')),(800,600)).convert()
 
         self.button = pygame.image.load(os.path.join('Images/button.png')).convert_alpha()
+
+        self.warrior = pygame.image.load(os.path.join('sprites/roman_warrior.png')).convert_alpha()
 
     def fade(self):
         fade = pygame.Surface((self.width,self.height))
@@ -122,13 +123,15 @@ class Draw:
             title = title_font.render('Baixo Império',1,white)
             arrows = low_empire_arrows
             periods = low_empire_periods
+        end = title_font.render('Fim',1,white)
 
         start_pos = (0,290)
         end_pos = (8000-map_limit,290)
 
-        self.window.fill(black)
+        self.window.blit(self.background,(0,0))
         self.window.blit(title,(25-obstacle_view,5))
-        
+        self.window.blit(end,(1200-obstacle_view,5))
+
         for arr in arrows:
             self.window.blit(self.arrow,(arr[0]-obstacle_view,arr[1]))
 
@@ -138,7 +141,7 @@ class Draw:
             self.window.blit(period[0],(period_rect.x-period[0].get_width()//2,240))
 
         pygame.draw.line(self.window,white,start_pos,end_pos,width=10)
-        pygame.draw.rect(self.window,white,player)
+        self.window.blit(self.warrior,(player.x,235))
 
         if display_square is not None:
             square = pygame.Rect(display_square[0][0]-obstacle_view,display_square[0][1],square_width,square_height)

@@ -8,7 +8,7 @@ from settings.movement import Movement
 width,height = 800,600
 
 window = pygame.display.set_mode((width, height))
-name = pygame.display.set_caption('Roman Empire Timeline')
+name = pygame.display.set_caption('Paulão Pintão')
 
 black = (0,0,0)
 white = (255,255,255)
@@ -61,10 +61,18 @@ def main():
             map_limit,obstacle_view,square_width,square_height,display_square = movement.movement(keys_pressed,empire)
             draw.draw(player,map_limit,obstacle_view,square_width,square_height,empire,display_square)
 
+            if map_limit == 500 and keys_pressed[pygame.K_RETURN]:
+                screen = 1
+                movement.reset()
+
         elif screen == 3:
             keys_pressed = pygame.key.get_pressed()
             map_limit,obstacle_view,square_width,square_height,display_square = movement.movement(keys_pressed,empire)
             draw.draw(player,map_limit,obstacle_view,square_width,square_height,empire,display_square)
 
+            if map_limit == 500 and keys_pressed[pygame.K_RETURN]:
+                screen = 1
+                movement.reset()
+
 if __name__ == '__main__':
-    main()
+    main() #AI RÉGUA MESSI MÍDIA

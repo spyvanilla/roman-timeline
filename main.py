@@ -58,8 +58,8 @@ def main():
 
         elif screen == 2:
             keys_pressed = pygame.key.get_pressed()
-            map_limit,obstacle_view,square_width,square_height,display_square = movement.movement(keys_pressed,empire)
-            draw.draw(player,map_limit,obstacle_view,square_width,square_height,empire,display_square)
+            map_limit,obstacle_view,square_width,square_height,current_direction,current_sprite,display_square = movement.movement(keys_pressed,empire)
+            draw.draw(player,map_limit,obstacle_view,square_width,square_height,current_direction,current_sprite,empire,display_square)
 
             if map_limit == 500 and keys_pressed[pygame.K_RETURN]:
                 screen = 1
@@ -67,12 +67,13 @@ def main():
 
         elif screen == 3:
             keys_pressed = pygame.key.get_pressed()
-            map_limit,obstacle_view,square_width,square_height,display_square = movement.movement(keys_pressed,empire)
-            draw.draw(player,map_limit,obstacle_view,square_width,square_height,empire,display_square)
+            map_limit,obstacle_view,square_width,square_height,current_direction,current_sprite,display_square = movement.movement(keys_pressed,empire)
+            draw.draw(player,map_limit,obstacle_view,square_width,square_height,current_direction,current_sprite,empire,display_square)
 
             if map_limit == 500 and keys_pressed[pygame.K_RETURN]:
                 screen = 1
                 movement.reset()
+        print("Te amo Paulo")
 
 if __name__ == '__main__':
     main() #AI RÉGUA MESSI MÍDIA

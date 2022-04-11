@@ -30,6 +30,10 @@ class Movement:
         self.obstacle_view = 0
 
         self.line_position = 10
+        self.current_direction = 1
+
+        self.current_sprite = 0
+        self.movement_count = 0
 
     def reset(self):
         self.player.x = 10
@@ -49,6 +53,12 @@ class Movement:
         self.square_width += 20
         self.square_height += 20
 
+    def change_sprite(self):
+        self.current_sprite += 1
+
+        if self.current_sprite > 11:
+            self.current_sprite = 0
+
     def movement(self,keys_pressed,empire):
         if empire == 1:
             square_positions = high_empire_square_positions
@@ -58,6 +68,11 @@ class Movement:
             empire_limit = low_empire_limit
 
         if keys_pressed[pygame.K_a]:
+            if self.current_direction == 1:
+                self.current_direction = 0
+                self.current_sprite = 0
+                self.movement_count = 0
+
             if self.player.x == 390:
                 self.map_limit -= self.player_velocity
                 self.obstacle_view -= self.player_velocity
@@ -68,11 +83,21 @@ class Movement:
                     self.line_position = 385
                     self.map_limit = 0
             else:
-                if self.player.x >= 5:
+                if self.player.x >= -75:
                     self.player.x -= self.player_velocity
                     self.line_position -= self.player_velocity
+            self.movement_count += 1
+
+            if self.movement_count == 6:
+                self.change_sprite()
+                self.movement_count = 0
 
         if keys_pressed[pygame.K_d]:
+            if self.current_direction == 0:
+                self.current_direction = 1
+                self.current_sprite = 0
+                self.movement_count = 0
+
             if self.player.x == 390:
                 self.map_limit += self.player_velocity
                 self.obstacle_view += self.player_velocity
@@ -82,19 +107,24 @@ class Movement:
                     self.player.x = 395
                     self.map_limit = 500
             else:
-                if self.player.x <= 785:
+                if self.player.x <= 670:
                     self.player.x += self.player_velocity
                     self.line_position += self.player_velocity
+            self.movement_count += 1
+
+            if self.movement_count == 6:
+                self.change_sprite()
+                self.movement_count = 0
 
         for square_position in square_positions:
             if self.line_position >= square_position[0][0] and self.line_position <= square_position[0][1]:
                 display = self.open_animation()
 
                 if display is not None:
-                    return self.map_limit,self.obstacle_view,self.square_width,self.square_height,[square_position[2],square_position[1]]
-                return self.map_limit,self.obstacle_view,self.square_width,self.square_height,[(square_position[2])]
+                    return self.map_limit,self.obstacle_view,self.square_width,self.square_height,self.current_direction,self.current_sprite,[square_position[2],square_position[1]]
+                return self.map_limit,self.obstacle_view,self.square_width,self.square_height,self.current_direction,self.current_sprite,[(square_position[2])]
         else:
             self.square_width = 0
             self.square_height = 0
 
-        return self.map_limit,self.obstacle_view,self.square_width,self.square_height,None
+        return self.map_limit,self.obstacle_view,self.square_width,self.square_height,self.current_direction,self.current_sprite,None

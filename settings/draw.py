@@ -59,10 +59,63 @@ class Draw:
         self.arrow = pygame.image.load(os.path.join('Images/arrow.png')).convert_alpha()
         self.colosseum = pygame.transform.scale(pygame.image.load(os.path.join('Images/colosseum.png')),(800,600)).convert()
         self.background = pygame.transform.scale(pygame.image.load(os.path.join('Images/background.png')),(800,600)).convert()
-
         self.button = pygame.image.load(os.path.join('Images/button.png')).convert_alpha()
 
-        self.warrior = pygame.image.load(os.path.join('sprites/roman_warrior.png')).convert_alpha()
+        self.rightwalking1 = pygame.image.load(os.path.join('Right Sprites/rightwalking1.png')).convert_alpha()
+        self.rightwalking2 = pygame.image.load(os.path.join('Right Sprites/rightwalking2.png')).convert_alpha()
+        self.rightwalking3 = pygame.image.load(os.path.join('Right Sprites/rightwalking3.png')).convert_alpha()
+        self.rightwalking4 = pygame.image.load(os.path.join('Right Sprites/rightwalking4.png')).convert_alpha()
+        self.rightwalking5 = pygame.image.load(os.path.join('Right Sprites/rightwalking5.png')).convert_alpha()
+        self.rightwalking6 = pygame.image.load(os.path.join('Right Sprites/rightwalking6.png')).convert_alpha()
+        self.rightwalking7 = pygame.image.load(os.path.join('Right Sprites/rightwalking7.png')).convert_alpha()
+        self.rightwalking8 = pygame.image.load(os.path.join('Right Sprites/rightwalking8.png')).convert_alpha()
+        self.rightwalking9 = pygame.image.load(os.path.join('Right Sprites/rightwalking9.png')).convert_alpha()
+        self.rightwalking10 = pygame.image.load(os.path.join('Right Sprites/rightwalking10.png')).convert_alpha()
+        self.rightwalking11 = pygame.image.load(os.path.join('Right Sprites/rightwalking11.png')).convert_alpha()
+        self.rightwalking12 = pygame.image.load(os.path.join('Right Sprites/rightwalking12.png')).convert_alpha()
+
+        self.rightwalking = [
+            self.rightwalking1,
+            self.rightwalking2,
+            self.rightwalking3,
+            self.rightwalking4,
+            self.rightwalking5,
+            self.rightwalking6,
+            self.rightwalking7,
+            self.rightwalking8,
+            self.rightwalking9,
+            self.rightwalking10,
+            self.rightwalking11,
+            self.rightwalking12
+        ]
+
+        self.leftwalking1 = pygame.image.load(os.path.join('Left Sprites/leftwalking1.png')).convert_alpha()
+        self.leftwalking2 = pygame.image.load(os.path.join('Left Sprites/leftwalking2.png')).convert_alpha()
+        self.leftwalking3 = pygame.image.load(os.path.join('Left Sprites/leftwalking3.png')).convert_alpha()
+        self.leftwalking4 = pygame.image.load(os.path.join('Left Sprites/leftwalking4.png')).convert_alpha()
+        self.leftwalking5 = pygame.image.load(os.path.join('Left Sprites/leftwalking5.png')).convert_alpha()
+        self.leftwalking6 = pygame.image.load(os.path.join('Left Sprites/leftwalking6.png')).convert_alpha()
+        self.leftwalking7 = pygame.image.load(os.path.join('Left Sprites/leftwalking7.png')).convert_alpha()
+        self.leftwalking8 = pygame.image.load(os.path.join('Left Sprites/leftwalking8.png')).convert_alpha()
+        self.leftwalking9 = pygame.image.load(os.path.join('Left Sprites/leftwalking9.png')).convert_alpha()
+        self.leftwalking10 = pygame.image.load(os.path.join('Left Sprites/leftwalking10.png')).convert_alpha()
+        self.leftwalking11 = pygame.image.load(os.path.join('Left Sprites/leftwalking11.png')).convert_alpha()
+        self.leftwalking12 = pygame.image.load(os.path.join('Left Sprites/leftwalking12.png')).convert_alpha()
+
+        self.leftwalking = [
+            self.leftwalking1,
+            self.leftwalking2,
+            self.leftwalking3,
+            self.leftwalking4,
+            self.leftwalking5,
+            self.leftwalking6,
+            self.leftwalking7,
+            self.leftwalking8,
+            self.leftwalking9,
+            self.leftwalking10,
+            self.leftwalking11,
+            self.leftwalking12
+        ]
 
     def fade(self):
         fade = pygame.Surface((self.width,self.height))
@@ -114,7 +167,7 @@ class Draw:
 
         pygame.display.update()
 
-    def draw(self,player,map_limit,obstacle_view,square_width,square_height,empire,display_square=None):
+    def draw(self,player,map_limit,obstacle_view,square_width,square_height,current_direction,current_sprite,empire,display_square=None):
         if empire == 1:
             title = title_font.render('Alto Império',1,white)
             arrows = high_empire_arrows
@@ -123,6 +176,11 @@ class Draw:
             title = title_font.render('Baixo Império',1,white)
             arrows = low_empire_arrows
             periods = low_empire_periods
+
+        if current_direction == 1:
+            walking = self.rightwalking
+        else:
+            walking = self.leftwalking
         end = title_font.render('Fim',1,white)
 
         start_pos = (0,290)
@@ -141,7 +199,7 @@ class Draw:
             self.window.blit(period[0],(period_rect.x-period[0].get_width()//2,240))
 
         pygame.draw.line(self.window,white,start_pos,end_pos,width=10)
-        self.window.blit(self.warrior,(player.x,235))
+        self.window.blit(walking[current_sprite],(player.x,172))
 
         if display_square is not None:
             square = pygame.Rect(display_square[0][0]-obstacle_view,display_square[0][1],square_width,square_height)

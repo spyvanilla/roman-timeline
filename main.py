@@ -8,7 +8,7 @@ from settings.movement import Movement
 width,height = 800,600
 
 window = pygame.display.set_mode((width, height))
-name = pygame.display.set_caption('Paulão Pintão')
+name = pygame.display.set_caption('Paulão Pontão')
 
 black = (0,0,0)
 white = (255,255,255)
@@ -61,7 +61,7 @@ def main():
             map_limit,obstacle_view,square_width,square_height,current_direction,current_sprite,display_square = movement.movement(keys_pressed,empire)
             draw.draw(player,map_limit,obstacle_view,square_width,square_height,current_direction,current_sprite,empire,display_square)
 
-            if map_limit == 500 and keys_pressed[pygame.K_RETURN]:
+            if map_limit == 800 and keys_pressed[pygame.K_RETURN]:
                 screen = 1
                 movement.reset()
 
@@ -70,10 +70,10 @@ def main():
             map_limit,obstacle_view,square_width,square_height,current_direction,current_sprite,display_square = movement.movement(keys_pressed,empire)
             draw.draw(player,map_limit,obstacle_view,square_width,square_height,current_direction,current_sprite,empire,display_square)
 
-            if map_limit == 500 and keys_pressed[pygame.K_RETURN]:
+            if map_limit == 1000 and keys_pressed[pygame.K_RETURN]:
                 screen = 1
                 movement.reset()
-        print("Te amo Paulo")
+        print("Te amo Paulo S2")
 
 if __name__ == '__main__':
     main() #AI RÉGUA MESSI MÍDIA

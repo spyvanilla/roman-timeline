@@ -2,8 +2,8 @@ import json
 
 import pygame
 
-high_empire_limit = 500
-low_empire_limit = 500
+high_empire_limit = 800
+low_empire_limit = 1000
 
 with open('square_positions.json','r',encoding='utf-8') as file:
     data = json.load(file)
@@ -105,7 +105,7 @@ class Movement:
 
                 if self.map_limit >= empire_limit:
                     self.player.x = 395
-                    self.map_limit = 500
+                    self.map_limit = empire_limit
             else:
                 if self.player.x <= 670:
                     self.player.x += self.player_velocity

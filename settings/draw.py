@@ -16,24 +16,29 @@ high_empire_arrows = [
     (479,300),
     (658,300),
     (837,300),
-    (1016,300)
+    (1016,300),
+    (1195,300)
 ]
 high_empire_periods = [
     [game_font.render('27 A.C',1,white),(200,270)],
-    [game_font.render('3 D.C',1,white),(1116,270)]
+    [game_font.render('3 D.C',1,white),(1295,270)]
 ]
+high_empire_end = 1500
 
 low_empire_arrows = [
     (300,300),
     (479,300),
     (658,300),
     (837,300),
-    (1016,300)
+    (1016,300),
+    (1195,300),
+    (1374,300)
 ]
 low_empire_periods = [
     [game_font.render('453 D.C',1,white),(200,270)],
-    [game_font.render('395 D.C',1,white),(1116,270)]
+    [game_font.render('395 D.C',1,white),(1474,270)]
 ]
+low_empire_end = 1700
 
 with open('square_positions.json','r',encoding='utf-8') as file:
     data = json.load(file)
@@ -172,10 +177,12 @@ class Draw:
             title = title_font.render('Alto Império',1,white)
             arrows = high_empire_arrows
             periods = high_empire_periods
+            empire_end = high_empire_end
         else:
             title = title_font.render('Baixo Império',1,white)
             arrows = low_empire_arrows
             periods = low_empire_periods
+            empire_end = low_empire_end
 
         if current_direction == 1:
             walking = self.rightwalking
@@ -188,7 +195,7 @@ class Draw:
 
         self.window.blit(self.background,(0,0))
         self.window.blit(title,(25-obstacle_view,5))
-        self.window.blit(end,(1200-obstacle_view,5))
+        self.window.blit(end,(empire_end-obstacle_view,5))
 
         for arr in arrows:
             self.window.blit(self.arrow,(arr[0]-obstacle_view,arr[1]))

@@ -33,8 +33,8 @@ low_empire_arrows = [
     (1016,300)
 ]
 low_empire_periods = [
-    [game_font.render('453 A.C',1,white),(200,270)],
-    [game_font.render('395 A.C',1,white),(1116,270)]
+    [game_font.render('453 D.C',1,white),(200,270)],
+    [game_font.render('395 D.C',1,white),(1116,270)]
 ]
 
 with open('square_positions.json','r',encoding='utf-8') as file:

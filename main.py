@@ -73,7 +73,6 @@ def main():
             if map_limit == 1000 and keys_pressed[pygame.K_RETURN]:
                 screen = 1
                 movement.reset()
-        print("Te amo Paulo S2")
 
 if __name__ == '__main__':
     main()

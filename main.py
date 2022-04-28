@@ -76,4 +76,4 @@ def main():
         print("Te amo Paulo S2")
 
 if __name__ == '__main__':
-    main() #AI RÉGUA MESSI MÍDIA
+    main()

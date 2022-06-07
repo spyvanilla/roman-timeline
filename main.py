@@ -8,7 +8,7 @@ from settings.movement import Movement
 width,height = 800,600
 
 window = pygame.display.set_mode((width, height))
-name = pygame.display.set_caption('Paulão Pontão')
+name = pygame.display.set_caption('Roman Timeline')
 
 black = (0,0,0)
 white = (255,255,255)

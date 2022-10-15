@@ -1,4 +1,4 @@
-# Linha do tempo do Império Romano feita em pygame
+# Linha do Tempo do Império Romano
 
 Mostra a linha do tempo das duas fases do Império Romano:
 
